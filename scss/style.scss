@@ -12,9 +12,7 @@ html {
 }
 
 
-
                         /* ---:::   Color de la pagina y header   :::--- */
-
 
 
 .contenedor {
@@ -49,6 +47,10 @@ main {
     max-width: 100%;
 }
 
+
+/* ---:::   Logo y titulo   :::--- */
+
+
 .headerLogoTitulo{
     display: flex;
     grid-area: header;
@@ -61,40 +63,30 @@ main {
     left: 0;
     top: 0;
     right: 0;
-}
-
-
-
-                        /* ---:::   Logo y titulo   :::--- */
-
-
-
-.logo{
-    display: flex;
-    text-decoration: none;
-    text-align: center;
-
-    .logo img{
-      height: 50px;
-      margin-right: 10px;
-      transition: 1s;
+    .logo{
+        display: flex;
+        text-decoration: none;
+        text-align: center;
+        }
+        .logo img{
+            height: 50px;
+            margin-right: 10px;
+            transition: 1s;
+        }
+      
+        .logo img:hover{
+            transform: rotate(360deg);
+        }
+    .titulo{
+        font-size: 30px;
+        font-weight: bolder;
+        color: #eeee9e;
+        text-decoration: none;
     }
-
-    .logo img:hover{
-      transform: rotate(360deg);
-    }
-
-.titulo{
-    font-size: 30px;
-    font-weight: bolder;
-    color: #eeee9e;
-    text-decoration: none;
 }
-
 
 
                         /* ---:::   Barra de navegacion   :::--- */
-
 
 
 nav{
