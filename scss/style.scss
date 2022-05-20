@@ -179,7 +179,7 @@ input {
 }  */
 
 
-                        /* ---:::   Para separar entre Sections, Main en gral, tamaños de imagen, h2   :::--- */
+                        /* ---:::   Para separar entre Sections, Main en gral, tamaños de imagen, h2   :::--- */ //Mixin - scss
 
 
 section{
@@ -192,19 +192,30 @@ h2{
     padding: $spacing1;
     animation: bounce;}
 
+    @mixin size ($ancho, $alto, $espaciado, $borde){
+        height: $ancho;
+        width: $alto;
+        padding: $espaciado;
+        border-radius: $borde;
+        }
+
 .imagen1-Home, .imagen2-Home, .imagen1-Divulgacion, .imagen2-Divulgacion  {
-    width: 80%;
-    height: auto;
-    border-radius: 10px;
-    padding: 10px;}
-.card {
-    z-index: 0;
-    margin-top: $spacing1;
-    margin-bottom: $spacing1;
-    .card-header {
-        background-color: $color-primary;}
+    @include size (auto, 80%, 10px, 10px)
 }
 
+                        /* ---:::   Cartas   :::--- */ //Map - scss
+
+$cartas: (
+    card: #000000,
+    header: rgb(0, 0, 0),
+    body: rgb(0, 0, 0),
+);
+
+@each $carta, $color in $cartas {
+    .card-#{$carta} {
+        color: $color
+    }
+}
 
                         /* ---:::   diseño de formulario de soporte   :::--- */
 
@@ -232,7 +243,6 @@ h2{
         border-bottom: 2px solid grey;}
 }
 
-
                         /* ---:::   diseño de table   :::--- */
 
 
@@ -253,15 +263,17 @@ h2{
         color: white;}
 }
 
+                        /* ---:::   links de canales   :::--- */ //Extend - scss
 
-                        /* ---:::   links de canales   :::--- */
 
-
-.listaDeCanales li{
-    padding-bottom: 10px;
+.listaDeCanales{
+    color: $cuarto-color;
+    li{
+        padding-bottom: 10px;
     a{
-        text-decoration: none;
-        color: $cuarto-color;}
+        @extend .listaDeCanales;
+        text-decoration: none;}
+    }
 }
 
                         /* ---:::   Pie de pagina   :::--- */
@@ -295,8 +307,9 @@ footer {
         margin-bottom: 25px;
         font-size: $spacing1;}
     .grupo-1 .box p{
-        color: $cuarto-color;
-        margin-bottom: 10px;}
+        color: $color-primary;
+        margin-bottom: 10px;
+        }
     .grupo-1 .red-social a{
         display: inline-block;
         text-decoration: none;
@@ -358,19 +371,14 @@ footer {
     nav{
         background-color: $color-secondary;
         height: $spacing2;
-    }
-    nav ul{
-        display: flex;
-
-    }
-    nav ul li{
-        height: 50px;
-    }
     
-    .menu-icon, #check{
-        display: none;
+        ul{
+            display: flex;}
+        ul li{
+            height: 50px;}
+        .menu-icon, #check{
+            display: none;}
     }
-
     main{
         padding-top: 60px;
         max-width: 950px;

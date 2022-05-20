@@ -18,7 +18,7 @@ html {
   max-width: 100%; }
 
 body {
-  background-color: #eeee9e;
+  background-color: #f2ff92;
   margin: 0; }
 
 header {
@@ -38,7 +38,7 @@ main {
 .headerLogoTitulo {
   display: flex;
   grid-area: header;
-  background-color: #4bb64b;
+  background-color: #588d54;
   padding: 10px;
   /*display: grid; */
   justify-content: space-between;
@@ -60,7 +60,7 @@ main {
   .headerLogoTitulo .titulo {
     font-size: 30px;
     font-weight: bolder;
-    color: #eeee9e;
+    color: #f2ff92;
     text-decoration: none; }
 
 /* ---:::   Barra de navegacion   :::--- */
@@ -89,18 +89,18 @@ nav {
     width: 100%;
     margin: 0; }
   nav ul li:hover {
-    background-color: #eeee9e; }
+    background-color: #f2ff92; }
   nav .nav-link {
     display: flex;
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    color: #74530e;
+    color: #957d48;
     width: 100%;
     height: 100%;
     font-size: 15px; }
   nav .nav-link:hover {
-    color: #4bb64b; }
+    color: #588d54; }
   nav .menu-icon img {
     width: 40px;
     height: 40px;
@@ -184,17 +184,20 @@ h2 {
   animation: bounce; }
 
 .imagen1-Home, .imagen2-Home, .imagen1-Divulgacion, .imagen2-Divulgacion {
-  width: 80%;
   height: auto;
-  border-radius: 10px;
-  padding: 10px; }
+  width: 80%;
+  padding: 10px;
+  border-radius: 10px; }
 
-.card {
-  z-index: 0;
-  margin-top: 20px;
-  margin-bottom: 20px; }
-  .card .card-header {
-    background-color: #4bb64b; }
+/* ---:::   Cartas   :::--- */
+.card-card {
+  color: #000000; }
+
+.card-header {
+  color: black; }
+
+.card-body {
+  color: black; }
 
 /* ---:::   diseño de formulario de soporte   :::--- */
 .form-soporte {
@@ -232,16 +235,17 @@ h2 {
     padding: 0px;
     font-size: 15px; }
   #table-container thead {
-    background-color: #74530e;
+    background-color: #957d48;
     border-bottom: solid 5px #fafa5a;
     color: white; }
 
 /* ---:::   links de canales   :::--- */
-.listaDeCanales li {
-  padding-bottom: 10px; }
-  .listaDeCanales li a {
-    text-decoration: none;
-    color: #74530e; }
+.listaDeCanales, .listaDeCanales li a {
+  color: #957d48; }
+  .listaDeCanales li, .listaDeCanales li a li {
+    padding-bottom: 10px; }
+    .listaDeCanales li a {
+      text-decoration: none; }
 
 /* ---:::   Pie de pagina   :::--- */
 footer {
@@ -268,11 +272,11 @@ footer {
   .pie-pagina .grupo-1 .box figure img {
     width: 250px; }
   .pie-pagina .grupo-1 .box h2 {
-    color: #74530e;
+    color: #957d48;
     margin-bottom: 25px;
     font-size: 20px; }
   .pie-pagina .grupo-1 .box p {
-    color: #74530e;
+    color: #588d54;
     margin-bottom: 10px; }
   .pie-pagina .grupo-1 .red-social a {
     display: inline-block;
@@ -282,16 +286,16 @@ footer {
     line-height: 45px;
     color: #fff;
     margin-right: 10px;
-    background-color: #4bb64b;
+    background-color: #588d54;
     text-align: center;
     transition: all 300ms ease; }
   .pie-pagina:hover {
-    color: #74530e; }
+    color: #957d48; }
   .pie-pagina .grupo-2 {
-    background-color: #4bb64b;
+    background-color: #588d54;
     padding: 15px 10px;
     text-align: center;
-    color: #eeee9e; }
+    color: #f2ff92; }
   .pie-pagina .grupo-2 small {
     font-size: 15px; }
 
@@ -323,12 +327,12 @@ footer {
   nav {
     background-color: #fafa5a;
     height: 100%; }
-  nav ul {
-    display: flex; }
-  nav ul li {
-    height: 50px; }
-  .menu-icon, #check {
-    display: none; }
+    nav ul {
+      display: flex; }
+    nav ul li {
+      height: 50px; }
+    nav .menu-icon, nav #check {
+      display: none; }
   main {
     padding-top: 60px;
     max-width: 950px;
@@ -344,7 +348,7 @@ footer {
   th, td {
     padding: 20px; }
   thead {
-    background-color: #74530e;
+    background-color: #957d48;
     border-bottom: solid 5px #fafa5a;
     color: white; }
   .pie-pagina {
