@@ -26,11 +26,8 @@ header{
     grid-area: header;
     z-index: 1;}
 main{
-    /*display: grid;
-    /*display: flex;*/
-    grid-area: main;
-    padding: 10px;
-    padding-top: 10px;
+    padding: $spacing1 - 10;
+    padding-top: $spacing1 - 10;
     max-width: $spacing2;}
 
 
@@ -41,8 +38,7 @@ main{
     display: flex;
     grid-area: header;
     background-color: $color-primary;
-    padding: 10px;
-    /*display: grid; */
+    padding: $spacing1 - 10;
     justify-content: space-between;
     align-items: center;
     position: fixed;
@@ -54,8 +50,8 @@ main{
         text-decoration: none;
         text-align: center;}
         .logo img{
-            height: 50px;
-            margin-right: 10px;
+            height: $spacing1+30;
+            margin-right: $spacing1 - 10;
             transition: 1s;}
         .logo img:hover{
             transform: rotate(360deg);}
@@ -66,16 +62,13 @@ main{
         text-decoration: none;}
 }
 
-
                         /* ---:::   Barra de navegacion   :::--- */
-
 
 nav{
     display: block;
     width: $spacing2;
     height: 20vh;
-    /*background-color: #fafa5a;*/
-    padding-top: 50px;
+    padding-top: $spacing1+30;
     list-style-type: none;
     padding-bottom: 0px;
     ul{
@@ -91,7 +84,7 @@ nav{
         padding: 2px;
         display: flex;
         justify-content: center;
-        height: 40px;
+        height: $spacing1*2;
         width: $spacing2;
         margin: 0;}
     ul li:hover{
@@ -111,7 +104,7 @@ nav{
         width: 40px;
         height: 40px;
         border-radius: 2px;
-        margin-top: 60px;}
+        margin-top: $spacing1*3;}
     #check{
         display: none;}
     .menu-icon, #check{
@@ -122,65 +115,7 @@ nav{
         transition: all .25s;}
 }
 
-
-                        /* ---:::   Barra buscadora   :::--- 
-
-
-.container {
-    position: fixed;
-	left: 50%;
-	top: 12%;
-	transform: translate(-50%,-50%);
-	padding: 10px;
-}
-input {
-    outline: none;
-	box-sizing: border-box;
-	height: 40px;
-	width: 50px;
-	padding: 0 10px;
-	color: #000;
-	border-radius: 50px;
-	font-size: 20px;
-	border: 2px solid #4bb64b;
-	transition: all .7s ease;
-}
-::placeholder {
-	color: grey;
-    font-size: 16px;
-}
-.btn {
-    position: fixed;
-	right: 0px;
-	top: -10px;
-	width: 70px;
-	height: 70px;
-	background: orange;
-	line-height: 80px;
-	border-radius: 50%;
-	text-align: center;
-	cursor: pointer;
-	transition: .5s;
-}
-.btn i {
-	font-size: 30px;
-	color: white;
-	line-height: 5px;
-	transition: all .7s ease;
-}
-.container:hover input {
-	width: 340px;
-}
-.container:hover i{
-	transform: rotate(-360deg);
-}
-.btn:hover{
-	background: orange;
-}  */
-
-
                         /* ---:::   Para separar entre Sections, Main en gral, tamaños de imagen, h2   :::--- */ //Mixin - scss
-
 
 section{
     margin-bottom: 1.6em;}
@@ -219,7 +154,6 @@ $cartas: (
 
                         /* ---:::   diseño de formulario de soporte   :::--- */
 
-
 .form-soporte{
     width: 70%;
     height: 310px;
@@ -245,7 +179,6 @@ $cartas: (
 
                         /* ---:::   diseño de table   :::--- */
 
-
 #table-container{
     padding-top: $spacing1;
     width: 70%;
@@ -265,7 +198,6 @@ $cartas: (
 
                         /* ---:::   links de canales   :::--- */ //Extend - scss
 
-
 .listaDeCanales{
     color: $cuarto-color;
     li{
@@ -277,7 +209,6 @@ $cartas: (
 }
 
                         /* ---:::   Pie de pagina   :::--- */
-
 
 footer {
     display: grid;
@@ -332,31 +263,19 @@ footer {
         font-size: 15px;}
 }            
 
-
-
                         /* ---:::   MEDIA QUERIES   :::--- */
-
-
 
 @media screen and (min-width: 320px) {
     th, td{
         padding: 5px;
     }
 }
-
 @media screen and (min-width: 730px){
     .container {
-        /*display: grid;
-        grid-template-areas:
-        "header header"
-        "nav nav"
-        "main main"
-        "footer footer";*/
         justify-content: center;
         align-items: center;
         align-content: center;
     }
-    
     .headerLogoTitulo{
         display: flex;
         flex-direction: row;
@@ -367,7 +286,6 @@ footer {
         top: 0;
         right: 0;
     }
-    
     nav{
         background-color: $color-secondary;
         height: $spacing2;
@@ -384,7 +302,6 @@ footer {
         max-width: 950px;
         margin: 0 auto;
     }
-    
     
     #table-container{
         padding-top: $spacing1;
@@ -405,7 +322,6 @@ footer {
         color: white;
     }
     
-    
     .pie-pagina{
         width: $spacing2;
         background-color: $color-secondary;
@@ -417,7 +333,6 @@ footer {
         padding: 45px 0px;
     }
 }
-
 
 @media screen and (min-width: 1024px){
     
